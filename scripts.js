@@ -100,3 +100,36 @@ function displayPost(post) {
 
 function savePost(post) {
     let posts = JSON.parse(localStorage.get
+
+                           if (username) {
+    const profile = {
+        username,
+        friendCode,
+        profileLink,
+        profileDescription
+    };
+
+    localStorage.setItem('profile', JSON.stringify(profile));
+    displayProfile(profile);
+
+    document.getElementById('profile-username').value = '';
+    document.getElementById('friend-code').value = '';
+    document.getElementById('profile-link').value = '';
+    document.getElementById('profile-description').value = '';
+} else {
+    alert('Bitte füllen Sie alle Felder aus.');
+}
+
+
+    const profileInfoDiv = document.createElement('div');
+profileInfoDiv.className = 'profile-info';
+
+profileInfoDiv.innerHTML = `
+    <h3>${profile.username}</h3>
+    <p>Switch-Freundescode: ${profile.friendCode}</p>
+    <p>Link: <a href="${profile.profileLink}" target="_blank">${profile.profileLink}</a></p>
+    <p>${profile.profileDescription}</p>
+`;
+
+profileDiv.appendChild(profileInfoDiv);
+
