@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.language-switcher {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.language-switcher button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+#post-form, #profile-form {
+    margin-bottom: 20px;
+}
+
+#post-form input, #post-form select, #post-form textarea,
+#profile-form input, #profile-form textarea {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#posts .post, #profile-display .profile-info {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#posts .post h3, #profile-display .profile-info h3 {
+    margin: 0;
+    padding: 0;
+}
+
+#posts .post p, #profile-display .profile-info p {
+    margin: 5px 0;
+}
