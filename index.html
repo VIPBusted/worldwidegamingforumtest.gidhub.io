@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Forum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gaming Forum</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" data-translate="home">Home</a></li>
+                <li><a href="#forum" data-translate="forum">Forum</a></li>
+                <li><a href="#profile" data-translate="profile">Profil</a></li>
+                <li><a href="#contact" data-translate="contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="language-switcher">
+            <button onclick="setLanguage('de')">DE</button>
+            <button onclick="setLanguage('en')">EN</button>
+            <button onclick="setLanguage('ja')">JA</button>
+            <button onclick="setLanguage('es')">ES</button>
+            <button onclick="setLanguage('ko')">KO</button>
+        </div>
+    </header>
+    <main>
+        <section id="forum">
+            <h2 data-translate="forum">Forum</h2>
+            <div id="post-form">
+                <input type="text" id="username" placeholder="Benutzername">
+                <select id="platform">
+                    <option value="PC">PC</option>
+                    <option value="Console">Konsole</option>
+                </select>
+                <textarea id="message" placeholder="Deine Nachricht..."></textarea>
+                <button onclick="postMessage()" data-translate="post">Posten</button>
+            </div>
+            <div id="posts"></div>
+        </section>
+        <section id="profile">
+            <h2 data-translate="profile">Profil</h2>
+            <div id="profile-form">
+                <input type="text" id="profile-username" placeholder="Benutzername">
+                <input type="text" id="friend-code" placeholder="Switch-Freundescode">
+                <input type="text" id="profile-link" placeholder="Link (z.B. Twitch, YouTube)">
+                <textarea id="profile-description" placeholder="Profilbeschreibung..."></textarea>
+                <button onclick="saveProfile()" data-translate="save">Speichern</button>
+            </div>
+            <div id="profile-display"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Gaming Forum. Alle Rechte vorbehalten.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
